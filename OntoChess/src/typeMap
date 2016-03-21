@@ -1,0 +1,14 @@
+http://purl.org/NET/chess/ontology/HalfMove	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#HalfMove
+http://purl.org/NET/chess/ontology/roundOfChessCompetition	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#RoundOfChessCompetition
+http://purl.org/NET/chess/ontology/firstMove	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#FirstMove
+http://purl.org/NET/chess/ontology/lastMove	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#LastMove
+http://purl.org/NET/chess/ontology/ChessCompetition	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#ChessCompetition
+http://purl.org/NET/chess/ontology/ChessGame	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#ChessGame
+http://purl.org/NET/chess/ontology/nextHalfMove	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#nextHalfMove
+http://purl.org/NET/chess/ontology/hasBlackPlayerName	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasBlackPlayerName
+http://purl.org/NET/chess/ontology/hasChessGameAtNamedPlace	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasChessGameAtNamedPlace
+http://purl.org/NET/chess/ontology/hasECOOpening	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasECOOpening
+http://purl.org/NET/chess/ontology/hasPGNResult	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasPGNResult
+http://purl.org/NET/chess/ontology/hasWhitePlayerName	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasWhitePlayerName
+http://purl.org/NET/chess/ontology/halfMoveRecord	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#halfMoveRecord
+http://semanticweb.cs.vu.nl/2009/11/sem/subEventOf	http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#subEventOf

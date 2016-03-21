@@ -1,0 +1,339 @@
+@prefix : <http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#> .
+@prefix ont: <http://purl.org/NET/chess/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix res: <http://purl.org/NET/chess/resource/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.semanticweb.org/max/ontologies/2016/2/ontoChess> a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasAnnotation
+
+:hasAnnotation a owl:ObjectProperty ;
+	rdfs:domain :HalfMove ;
+	rdfs:range :Annotation .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasBlackPlayer
+
+:hasBlackPlayer a owl:ObjectProperty ;
+	rdfs:domain :ChessGame ;
+	rdfs:range :BlackChessPlayer .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasFirstHalfMove
+
+:hasFirstHalfMove a owl:ObjectProperty , owl:FunctionalProperty , owl:InverseFunctionalProperty ;
+	rdfs:domain :ChessGame ;
+	rdfs:range :HalfMove .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasHalfMove
+
+:hasHalfMove a owl:ObjectProperty , owl:InverseFunctionalProperty ;
+	rdfs:domain :ChessGame ;
+	rdfs:range :HalfMove .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasLastHalfMove
+
+:hasLastHalfMove a owl:ObjectProperty , owl:FunctionalProperty , owl:InverseFunctionalProperty ;
+	rdfs:domain :ChessGame ;
+	rdfs:range :HalfMove .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasLocation
+
+:hasLocation a owl:ObjectProperty ;
+	rdfs:domain :PieceState ;
+	rdfs:range :Location .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasOwner
+
+:hasOwner a owl:ObjectProperty ;
+	rdfs:domain :GamePiece ;
+	rdfs:range :PlayerRole .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasPiece
+
+:hasPiece a owl:ObjectProperty ;
+	rdfs:domain :GameState ;
+	rdfs:range :GamePiece .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasStartingState
+
+:hasStartingState a owl:ObjectProperty ;
+	rdfs:domain :ChessGame ;
+	rdfs:range :StartingState .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasState
+
+:hasState a owl:ObjectProperty .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasWhitePlayer
+
+:hasWhitePlayer a owl:ObjectProperty ;
+	rdfs:domain :ChessGame ;
+	rdfs:range :WhiteChessPlayer .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#isPerformedBy
+
+:isPerformedBy a owl:ObjectProperty ;
+	rdfs:domain :AgentRole ;
+	rdfs:range :Agent .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#nextHalfMove
+
+:nextHalfMove a owl:ObjectProperty , owl:FunctionalProperty , owl:InverseFunctionalProperty ;
+	rdfs:domain :HalfMove ;
+	rdfs:range :HalfMove .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#nextState
+
+:nextState a owl:ObjectProperty ;
+	rdfs:domain :GameState ;
+	rdfs:range :GameState .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#occursInState
+
+:occursInState a owl:ObjectProperty ;
+	rdfs:domain :HalfMove ;
+	rdfs:range :GameState .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#partOf
+
+:partOf a owl:ObjectProperty .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#providesAgentRole
+
+:providesAgentRole a owl:ObjectProperty ;
+	rdfs:range :AgentRole .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#resultsInState
+
+:resultsInState a owl:ObjectProperty ;
+	rdfs:domain :HalfMove ;
+	rdfs:range :GameState .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#sameAs
+
+:sameAs a owl:ObjectProperty .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#subEventOf
+
+:subEventOf a owl:ObjectProperty ;
+	rdfs:domain :Event ;
+	rdfs:range :Event .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#annotationAsString
+
+:annotationAsString a owl:DatatypeProperty ;
+	rdfs:domain :Annotation ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#halfMoveRecord
+
+:halfMoveRecord a owl:DatatypeProperty ;
+	rdfs:domain :HalfMove ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasBlackPlayerName
+
+:hasBlackPlayerName a owl:DatatypeProperty ;
+	rdfs:domain :ChessGame ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasChessGameAtNamedPlace
+
+:hasChessGameAtNamedPlace a owl:DatatypeProperty ;
+	rdfs:domain :ChessGame ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasColour
+
+:hasColour a owl:DatatypeProperty ;
+	rdfs:domain :GamePiece ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasECOOpening
+
+:hasECOOpening a owl:DatatypeProperty ;
+	rdfs:domain :ChessGame ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasLocationStr
+
+:hasLocationStr a owl:DatatypeProperty ;
+	rdfs:domain :Location ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasName
+
+:hasName a owl:DatatypeProperty ;
+	rdfs:domain :Agent ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasPGNResult
+
+:hasPGNResult a owl:DatatypeProperty ;
+	rdfs:domain :ChessGame ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasShape
+
+:hasShape a owl:DatatypeProperty ;
+	rdfs:domain :Bishop .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#hasWhitePlayerName
+
+:hasWhitePlayerName a owl:DatatypeProperty ;
+	rdfs:domain :ChessGame ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#madeBy
+
+:madeBy a owl:DatatypeProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#Agent
+
+:Agent a owl:Class .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#AgentRole
+
+:AgentRole a owl:Class .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#Annotation
+
+:Annotation a owl:Class .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#AuthorRole
+
+:AuthorRole a owl:Class ;
+	rdfs:subClassOf :AgentRole .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#Bishop
+
+:Bishop a owl:Class ;
+	rdfs:subClassOf :GamePiece .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#BlackChessPlayer
+
+:BlackChessPlayer a owl:Class ;
+	rdfs:subClassOf :PlayerRole .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#ChessCompetition
+
+:ChessCompetition a owl:Class ;
+	rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#ChessGame
+
+:ChessGame a owl:Class ;
+	rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#Event
+
+:Event a owl:Class .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#FirstMove
+
+:FirstMove a owl:Class ;
+	rdfs:subClassOf :HalfMove .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#GamePiece
+
+:GamePiece a owl:Class .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#GameState
+
+:GameState a owl:Class .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#HalfMove
+
+:HalfMove a owl:Class ;
+	rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#King
+
+:King a owl:Class ;
+	rdfs:subClassOf :GamePiece .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#Knight
+
+:Knight a owl:Class ;
+	rdfs:subClassOf :GamePiece .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#LastMove
+
+:LastMove a owl:Class ;
+	rdfs:subClassOf :HalfMove .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#Location
+
+:Location a owl:Class .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#Pawn
+
+:Pawn a owl:Class ;
+	rdfs:subClassOf :GamePiece .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#PieceState
+
+:PieceState a owl:Class .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#PlayerRole
+
+:PlayerRole a owl:Class ;
+	rdfs:subClassOf :AgentRole .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#Queen
+
+:Queen a owl:Class ;
+	rdfs:subClassOf :GamePiece .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#Rook
+
+:Rook a owl:Class ;
+	rdfs:subClassOf :GamePiece .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#RoundOfChessCompetition
+
+:RoundOfChessCompetition a owl:Class ;
+	rdfs:subClassOf :Event .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#SetOfAnnotations
+
+:SetOfAnnotations a owl:Class .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#StartingState
+
+:StartingState a owl:Class ;
+	rdfs:subClassOf :GameState .
+# 
+# http://www.semanticweb.org/max/ontologies/2016/2/ontoChess#WhiteChessPlayer
+
+:WhiteChessPlayer a owl:Class ;
+	rdfs:subClassOf :PlayerRole .
